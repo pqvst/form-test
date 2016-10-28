@@ -34,7 +34,7 @@ Sometimes (see below) the received data looks like this:
 
 Note that the hyphens and "WebKitForm" have been replaced by bytes that appear to be garbled. All the remaining content (besides the boundary identifier) is identical.
 
-### Conclusions
+### Observations
 
 * Able to reproduce when using HTTPS and HTTP/2
 
@@ -59,3 +59,7 @@ Note that the hyphens and "WebKitForm" have been replaced by bytes that appear t
 * I am not able to reproduce the issue locally on my dev machine. Locally I am using HTTP and HTTP/1. When testing in the hosted environment it is using HTTPS and HTTP/2.
 
 * If I try to use Fiddler with HTTPS decryption I am unable to reproduce the issue. Fiddler essentially performs a man-in-the-middle attack by installing a root certificate that Fiddler can use to decrypt outgoing traffic. (And doesn't use HTTP/2?).
+
+### Conclusions
+* To me it seems related to HTTP/2
+* I don't know why it doesn't affect all computers
