@@ -9,7 +9,7 @@ const PORT=8080;
 function handleRequest(req, res) {
   var method = req.method;
   if (method == "GET") {
-    return res.end(fs.readFileSync("./foobar", "utf8"));
+    return res.end(fs.readFileSync("./index.html", "utf8"));
   }
 
   var buffer = "";

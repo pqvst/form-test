@@ -6,7 +6,7 @@
   "scripts": {
     "now-start": "node ./index",
     "start": "nodemon ./index",
-    "now": "now"
+    "now": "now --npm"
   },
   "author": "",
   "license": "ISC",
