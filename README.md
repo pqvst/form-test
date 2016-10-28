@@ -2,6 +2,20 @@
 
 I'm experiencing a very strange issue. I have a website with a form file upload (enctype="multipart/form-data"). When I upload **a specific file** the binary data received by the web server appears garbled (and is not parsed correctly).
 
+### How to test:
+
+1. Run the code, or visit:  
+https://form-test-nevfrwpuhp.now.sh
+
+2. Use this test image:  
+![Test](https://raw.githubusercontent.com/pqvst/form-test/master/diagram.PNG)
+
+3. Close Chrome and reopen it.
+
+4. Attempt to upload the image multiple times.
+
+5. When the issue occurs the first line will say "BAD".
+
 ### Expected behavior:
 
 I expect the received data to look like this:
@@ -19,12 +33,6 @@ Sometimes (see below) the received data looks like this:
     Content-Type: image/png
 
 Note that the hyphens and "WebKitForm" have been replaced by bytes that appear to be garbled. All the remaining content (besides the boundary identifier) is identical.
-
-### Steps to Reproduce
-1. Close all open browsers and open Chrome
-2. Upload a file the first time, works fine
-3. Upload a file the second time, problem occurs
-4. Repeat...
 
 ### Conclusions
 
